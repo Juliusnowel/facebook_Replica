@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0px;
+}
+
+/* header section */
+
+.navbar .nav_content .content-1 img {
+  border-radius: 100%;
+  width: 40px;
+}
+
+.navbar .nav_content .content-1 form input {
+  width: 200px;
+  padding: 5px 15px;
+  border-radius: 50px;
+}
+
+.navbar .nav_content .content-2 {
+  width: 500px;
+  height: 40px;
+  padding: 5px;
+}
+
+.navbar .nav_content .content-2 a {
+  margin: 0px 6px;
+  border-radius: 15px;
+}
+
+.navbar .nav_content .content-2 a:hover {
+  background-color: rgb(52, 80, 182);
+  padding: 0px 5px;
+}
+
+.navbar .nav_content .content-2 a i {
+  margin: 0px 35px;
+  color: white;
+}
+
+.navbar .nav_content .content-3 a i {
+  margin: 5px 3px 0px 3px;
+  padding: 8px;
+  border-radius: 100%;
+  background-color: gray;
+  color: white;
+}
+
+.navbar .nav_content .content-3 .dropdown .btn {
+  padding: 0px;
+}
+
+.navbar .nav_content .content-3 .dropdown .btn .navProfileIcon {
+  border-radius: 100%;
+  width: 50px;
+}
+
+/* home page left content*/
+
+.home {
+  height: 570px;
+}
+
+.home .sidebar_left {
+  width: 22%;
+  height: 100%;
+  margin-right: 30px;
+}
+
+.home .sidebar_left .user {
+  margin: 10px 0px 0px 15px;
+}
+
+.home .sidebar_left .user img{
+  border: solid gray;
+  width: 40px;
+  border-radius: 100%;
+  height: 45px;
+  margin-right: 10px;
+}
+
+.home .sidebar_left .user p {
+  color: lightcoral;
+}
+
+.home .sidebar_left a {
+  text-decoration: none;
+  color: black;
+}
+
+.home .sidebar_left a i:hover {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+
+.home .sidebar_left a .pIcon-top {
+  padding: 5px 0px 5px 18px;
+  margin-left: 5px;
+}
+
+.home .sidebar_left a .pIcon-top span{
+  font-size: 15px;
+  margin-left: 10px;
+  color: rgb(56, 55, 55);
+}
+
+.home .sidebar_left a .pIcon {
+  padding: 5px 0px 5px 18px;
+  margin-left: 5px;
+}
+
+.home .sidebar_left a .pIcon span {
+  font-size: 15px;
+  margin-left: 10px;
+  color: rgb(56, 55, 55);
+}
+
+.home .sidebar_left .text {
+  color: rgb(56, 56, 56);
+  font-size: 13px;
+  margin-left: 20px;
+}
+
+.home .sidebar_left .hidden {
+  margin-bottom: 188px;
+}
+
+.home .sidebar_left footer {
+  color: rgb(87, 87, 87);
+  font-size: 12px;
+  padding: 10px;
+}
+
+/* home page center content*/
+
+.home .content_center {
+  width: 520px;
+}
+
+.home .content_center .my-day {
+  padding: 20px 10px 0px 10px;
+}
+
+.home .content_center .my-day a .myday-arrow {
+  text-align: center;
+  margin-top: 60px;
+  background-color: rgb(78, 77, 77);
+  width: 30px;
+  height: 32px;
+  border-radius: 100%;
+  color: white;
+}
+
+.home .content_center .my-day .card {
+  border: solid rgb(191, 190, 190) 1.5px;
+  width: 120px;
+  margin: 0px 2px;
+}
+
+.home .content_center .my-day .card img {
+  width: 100%;
+}
+
+.home .content_center .my-day .card .card-body {
+  text-align: center;
+  padding: 0px;
+}
+
+.home .content_center .my-day .card .card-body a i {
+  padding: 7px;
+  border-radius: 100%;
+  background-color: rgb(32, 109, 253);
+  color: white;
+}
+
+.home .content_center .my-day .card .card-body p {
+  margin-bottom: 5px;
+}
+
+.home .content_center .my-day .myday .profile {
+  margin: 5px 0px 20px 5px;
+  width: 25px;
+  border-radius: 100%;
+}
+
+.home .content_center .post form {
+  margin: 12px;
+  border: solid rgb(167, 166, 166) 1px;
+  border-radius: 10px;
+  width: 470px;
+  padding: 12px;
+}
+
+.home .content_center .post form .profile {
+  width: 30px;
+  border-radius: 100%;
+}
+
+.home .content_center .post form .textValue {
+  width: 390px;
+  font-size: 12px;
+  vertical-align: 7px;
+  border: solid rgb(167, 166, 166) 1px;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.home .content_center .post form .post-button {
+  text-align: center;
+}
+
+.home .content_center .post form .post-button a {
+  text-decoration: none;
+  color: black;
+  margin-left: 20px;
+}
+
+.home .content_center .post form .post-button a i {
+  font-size: 20px;
+}
+
+.home .content_center .post form .post-button a i span{
+  font-size: 17px;
+  color: rgb(87, 87, 87);
+  vertical-align: 2px;
+  margin-left: 5px;
+}
+
+/* home page right content*/
+
+.home .content_right {
+  width: 18%;
+}
+
+.home .content_right .account .title p {
+  color: rgb(104, 103, 103);
+  font-size: 12px;
+  padding-top: 20px;
+  margin: 0px;
+}
+
+.home .content_right .account a {
+  text-decoration: none;
+  color: gray;
+  padding: 2px 10px;
+}
+
+.home .content_right .account a:hover {
+  background-color: rgb(217, 217, 217);
+  border-radius: 5px;
+}
+
+.home .content_right .account a i {
+  font-size: 13px;
+  width: 80%;
+}
+
+.home .content_right .account a i span {
+  margin-left: 8px;
+}
+
+.home .content_right .contacts p {
+  margin-top: 10px;
+  color: rgb(104, 103, 103);
+  font-size: 12px;
+}
+
+.home .content_right .contacts .container-button i {
+  font-size: 15px;
+  color: rgb(65, 64, 64);
+  margin-top: 9px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.home .content_right .contacts .container-button i:hover {
+  background-color: rgb(167, 164, 164);
+  border-radius: 100%;
+  height: 22px;
+}
