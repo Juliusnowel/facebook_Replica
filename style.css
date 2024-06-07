@@ -195,13 +195,41 @@
   border-radius: 100%;
 }
 
-.home .content_center .post form .textValue {
-  width: 390px;
-  font-size: 12px;
-  vertical-align: 7px;
+.home .content_center .post form .post-container {
+  display: flex;
+  gap: 10px;
+}
+
+.home .content_center .post form .post-container .post-text {
+  width: 400px;
+  border-radius: 20px;
   border: solid rgb(167, 166, 166) 1px;
   padding: 5px 10px;
-  border-radius: 20px;
+  justify-content: space-between;
+}
+
+.home .content_center .post form .post-container .post-text .textValue {
+  width: 330px;
+  padding-left: 10px;
+  font-size: 14px;
+  border: 0;
+}
+
+.home .content_center .post form .post-container .post-text .textValue:focus {
+  outline: none;
+  border: none;
+  font-weight: bold;
+}
+
+.home .content_center .post form .post-container .post-text #postButton {
+  border-radius: 10px;
+  border: none;
+  width: 40px;
+}
+
+.home .content_center .post form .post-container .post-text #postButton:hover {
+  border: solid black 1px;
+  width: 38px;
 }
 
 .home .content_center .post form .post-button {

@@ -58,7 +58,7 @@
       <div class="sidebar_left bg-secondary-subtle">
         <div class="user d-flex">
           <img class="profile" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLvLWbYzVowfjynmvYOdm4SuORKNZyNP9SPuiogpJAig&s">
-          <p class="mt-2 fs-4">fistName lastName</p>
+          <p class="mt-2 fs-4">Julius Santiago</p>
         </div>
         <a href=""><i style="font-size:25px" class="pIcon-top d-block fa fa-group"><span>Friends</span></i></a>
         <a href=""><i style="font-size:25px" class="pIcon d-block fa fa-clock-o"><span>Memories</span></i></a>
@@ -105,8 +105,13 @@
         </div>
         <div class="post">
           <form method="/">
-            <input type="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLvLWbYzVowfjynmvYOdm4SuORKNZyNP9SPuiogpJAig&s" class="profile">
-            <input type="text" placeholder="What's on your mind, firstName lastName?" class="textValue">
+            <div class="post-container">
+              <input type="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLvLWbYzVowfjynmvYOdm4SuORKNZyNP9SPuiogpJAig&s" class="profile">
+              <div class="post-text">
+                <input id="postText" type="text" placeholder="What's on your mind, Julius Santiago?" class="textValue">
+                <button id="postButton">Post</button>
+              </div>
+            </div>
             <hr>
             <div class="post-button">
               <a href=""><i class="fa fa-camera text-danger"><span>Live video</span></i></a>
@@ -114,6 +119,9 @@
               <a href=""><i class="fa fa-smile-o text-warning"><span>Felling/activity</span></i></a>
             </div>
           </form>
+          <div class="postSection">
+            <p id="postHistory"></p>
+          </div>
         </div>
       </div>
 
@@ -154,5 +162,49 @@
         </div>
       </div>
     </main>
+    <script>
+      // Function to update the display with the stored post history
+      function updateDisplay() {
+        const postHistory = JSON.parse(localStorage.getItem("postHistory")) || [];
+        const postHistoryHtml = postHistory.map((post, index) => `
+          <div>
+            <p>${post}</p>
+            <button class="remove-button" onclick="removePost(${index})">Remove</button>
+          </div>
+        `).join('');
+        document.getElementById("postHistory").innerHTML = postHistoryHtml;
+      }
+
+      // Function to add a new post to the post history
+      function addPost(newPost) {
+        const postHistory = JSON.parse(localStorage.getItem("postHistory")) || [];
+        postHistory.push(newPost);
+        localStorage.setItem("postHistory", JSON.stringify(postHistory));
+        updateDisplay();
+      }
+
+      // Function to remove a post from the post history
+      function removePost(index) {
+        const postHistory = JSON.parse(localStorage.getItem("postHistory")) || [];
+        postHistory.splice(index, 1);
+        localStorage.setItem("postHistory", JSON.stringify(postHistory));
+        updateDisplay();
+      }
+
+      // Event listener for the post button to add a new post
+      document.getElementById("postButton").addEventListener("click", function() {
+        const newPost = document.getElementById("postText").value.trim();
+        if (newPost !== '') {
+          addPost(newPost);
+          document.getElementById("postText").value = ''; // Clear the textarea after posting
+        }
+      });
+
+      // Automatically load and display the stored post history when the page loads
+      window.addEventListener("load", function() {
+        updateDisplay();
+      });
+
+    </script>
   </body>
 </html>
