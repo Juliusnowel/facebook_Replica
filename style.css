@@ -253,6 +253,42 @@
   margin-left: 5px;
 }
 
+.home .content_center .post #postHistory {
+  background-color: rgb(240, 236, 236);
+  border-radius: 10px;
+  width: 485px;
+  padding: 10px;
+}
+
+.home .content_center .post #postHistory .Profile1st-Container {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.home .content_center .post #postHistory .Profile1st-Container img {
+  width: 7%;
+  border-radius: 100%;
+  margin-right: 15px;
+}
+
+.home .content_center .post #postHistory .Profile1st-Container .remove-button {
+  margin-left: 40%;
+  border: none;
+  background-color: aliceblue;
+  width: 20%;
+  height: 10%;
+  border-radius: 20px;
+}
+
+.home .content_center .post #postHistory .Profile1st-Container .remove-button:hover {
+  background-color: rgb(111, 111, 111);
+  color: white;
+}
+
+.home .content_center .post #postHistory .Profile2nd-Container #likeText {
+  height: 30px;
+}
+
 /* home page right content*/
 
 .home .content_right {

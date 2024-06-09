@@ -119,9 +119,7 @@
               <a href=""><i class="fa fa-smile-o text-warning"><span>Felling/activity</span></i></a>
             </div>
           </form>
-          <div class="postSection">
-            <p id="postHistory"></p>
-          </div>
+          <div id="postHistory"></div>
         </div>
       </div>
 
@@ -167,9 +165,18 @@
       function updateDisplay() {
         const postHistory = JSON.parse(localStorage.getItem("postHistory")) || [];
         const postHistoryHtml = postHistory.map((post, index) => `
-          <div>
-            <p>${post}</p>
+          <div class='Profile1st-Container'>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLvLWbYzVowfjynmvYOdm4SuORKNZyNP9SPuiogpJAig&s" alt="profile">
+            <p><b>Julius Santiago</b></p>
             <button class="remove-button" onclick="removePost(${index})">Remove</button>
+          </div>
+          <p class='postText'>${post}</p>
+          <div class='Profile2nd-Container'>
+            <p id="likeText"></p>
+            <hr>
+            <button id='likeButton' class="like-button" onclick="toggleLike()">Like</button>
+            <button class="comment-button" onclick="">Comment</button>
+            <button class="share-button" onclick="">Share</button>
           </div>
         `).join('');
         document.getElementById("postHistory").innerHTML = postHistoryHtml;
@@ -205,6 +212,20 @@
         updateDisplay();
       });
 
+      function toggleLike() {
+        const likeText = document.getElementById('likeText');
+        const button = document.getElementById('likeButton');
+            
+        if (likeText.innerHTML === '') {
+          // If the text is empty, set it to '👍 Julius Santiago' and change the button text to 'Unlike'
+          likeText.innerHTML = '<hr>👍 Julius Santiago';
+          button.innerHTML = 'Unlike';
+        } else {
+          // If the text is not empty, clear it and change the button text to 'Like'
+          likeText.innerHTML = '';
+          button.innerHTML = 'Like';
+        }
+      }
     </script>
   </body>
 </html>
